@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, GraduationCap, Cog, MessageSquare, BarChart3, Shield } from "lucide-react";
+import { Brain, GraduationCap, Cog, MessageSquare, BarChart3, Users, Headphones, BookOpen } from "lucide-react";
 
 const services = [
   {
@@ -13,9 +13,19 @@ const services = [
     description: "Personalizamos a plataforma Moodle de acordo com suas necessidades, criando ambientes de aprendizado únicos e eficientes.",
   },
   {
+    icon: Headphones,
+    title: "Plataforma Omnichannel",
+    description: "Implementamos soluções de atendimento omnichannel com CRM integrado e bots inteligentes para automatizar e melhorar o suporte ao cliente.",
+  },
+  {
     icon: MessageSquare,
     title: "Chatbots Inteligentes",
     description: "Criamos chatbots com IA para automatizar atendimento ao cliente e suporte técnico 24 horas por dia.",
+  },
+  {
+    icon: BookOpen,
+    title: "Treinamentos em Tecnologia",
+    description: "Capacitação profissional em tecnologia com metodologia acadêmica, ministrada por professor universitário com formação em Computação.",
   },
   {
     icon: BarChart3,
@@ -25,12 +35,12 @@ const services = [
   {
     icon: Cog,
     title: "Integração de Sistemas",
-    description: "Integramos o Moodle e soluções de IA aos seus sistemas existentes de forma transparente e eficiente.",
+    description: "Integramos plataformas de ensino, atendimento e soluções de IA aos seus sistemas existentes de forma transparente.",
   },
   {
-    icon: Shield,
+    icon: Users,
     title: "Suporte Especializado",
-    description: "Oferecemos suporte técnico contínuo e treinamentos para garantir o máximo aproveitamento das soluções.",
+    description: "Oferecemos suporte técnico contínuo e acompanhamento para garantir o máximo aproveitamento das soluções.",
   },
 ];
 
@@ -58,7 +68,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -67,14 +77,14 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="group h-full p-8 bg-card rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-accent/30">
-                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="group h-full p-6 bg-card rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-accent/30">
+                <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
