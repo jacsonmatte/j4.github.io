@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Users, Lightbulb, Target } from "lucide-react";
 
 const features = [
-  "Mais de 10 anos de experiência em tecnologia",
-  "Equipe especializada em IA e EaD",
+  "Formação em Ciência da Computação",
+  "Anos de experiência como professor universitário",
+  "Especialista em IA, EaD e plataformas de atendimento",
   "Projetos personalizados para cada cliente",
-  "Suporte técnico dedicado",
+  "Suporte técnico dedicado e humanizado",
 ];
 
 const stats = [
@@ -34,15 +35,15 @@ const About = () => {
               <span className="gradient-text">jornada digital</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              A J4 Treinamento e Soluções em Sistemas é uma empresa especializada 
-              em consultoria e desenvolvimento de soluções tecnológicas. Combinamos 
-              expertise em Inteligência Artificial com profundo conhecimento em 
-              plataformas educacionais para entregar resultados excepcionais.
+              A J4 Treinamento e Soluções em Sistemas é uma empresa liderada por 
+              profissional formado em Computação com vasta experiência acadêmica. 
+              Combinamos expertise em Inteligência Artificial, plataformas educacionais 
+              e soluções de atendimento omnichannel para entregar resultados excepcionais.
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Nossa missão é democratizar o acesso à tecnologia de ponta, ajudando 
-              empresas e instituições a aproveitarem todo o potencial da IA e do 
-              ensino digital.
+              Nossa missão é democratizar o acesso à tecnologia de ponta, oferecendo 
+              treinamentos especializados e consultoria para empresas e instituições 
+              aproveitarem todo o potencial da transformação digital.
             </p>
 
             <ul className="space-y-4">

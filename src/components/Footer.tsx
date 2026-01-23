@@ -1,12 +1,10 @@
-import { Brain } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="py-12 bg-muted/50 border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-center gap-8">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center">
               <span className="text-primary-foreground font-display font-bold text-xl">J4</span>
@@ -33,9 +31,17 @@ const Footer = () => {
             </a>
           </nav>
 
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} J4 Treinamento e Soluções em Sistemas LTDA
-          </p>
+          <div className="text-center space-y-2">
+            <p className="text-sm text-muted-foreground">
+              J4 Treinamento e Soluções em Sistemas LTDA
+            </p>
+            <p className="text-xs text-muted-foreground">
+              CNPJ: 44.618.978/0001-97
+            </p>
+            <p className="text-xs text-muted-foreground">
+              © {currentYear} Todos os direitos reservados
+            </p>
+          </div>
         </div>
       </div>
     </footer>
