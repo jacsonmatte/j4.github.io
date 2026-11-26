@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, GraduationCap, Cog, MessageSquare, BarChart3, Users, Headphones, BookOpen } from "lucide-react";
+import { Brain, GraduationCap, Cog, MessageSquare, BarChart3, Users, Headphones, BookOpen, Cpu } from "lucide-react";
 
 const services = [
   {
@@ -26,6 +26,11 @@ const services = [
     icon: BookOpen,
     title: "Treinamentos em Tecnologia",
     description: "Capacitação profissional em tecnologia com metodologia acadêmica, ministrada por professor universitário com formação em Computação.",
+  },
+  {
+    icon: Cpu,
+    title: "Plataforma IoT Customizada",
+    description: "Implantamos e personalizamos plataformas de Internet das Coisas: conexão de sensores e dispositivos, dashboards em tempo real, alertas automáticos e integração com seus sistemas.",
   },
   {
     icon: BarChart3,
@@ -68,7 +73,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

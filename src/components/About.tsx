@@ -4,7 +4,7 @@ import { CheckCircle2, Users, Lightbulb, Target } from "lucide-react";
 const features = [
   "Formação em Ciência da Computação",
   "Anos de experiência como professor universitário",
-  "Especialista em IA, EaD e plataformas de atendimento",
+  "Especialista em IA, EaD, IoT e plataformas de atendimento",
   "Projetos personalizados para cada cliente",
   "Suporte técnico dedicado e humanizado",
 ];

@@ -69,7 +69,7 @@ const Contact = () => {
                   Telefone / WhatsApp
                 </h3>
                 <p className="text-muted-foreground group-hover:text-accent transition-colors">
-                  (49) 9 9591-0957
+                  (49) 9 9959-1057
                 </p>
               </div>
             </a>
