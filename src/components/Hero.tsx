@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Brain, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Sparkles, MessageCircle, Cpu, GraduationCap } from "lucide-react";
+import Logo from "./Logo";
+
+const whatsappLink = "https://wa.me/5549999591057?text=Olá! Gostaria de saber mais sobre os serviços da J4.";
 
 const Hero = () => {
   return (
@@ -29,12 +32,11 @@ const Hero = () => {
         >
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">J4</span>
+              <Logo className="w-10 h-10" />
+              <div className="hidden sm:block leading-tight">
+                <span className="block text-primary-foreground font-display font-semibold text-lg">J4 Soluções</span>
+                <span className="block text-primary-foreground/60 text-xs">Treinamento e Sistemas</span>
               </div>
-              <span className="text-primary-foreground font-display font-semibold text-lg hidden sm:block">
-                J4 Treinamento
-              </span>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#servicos" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm font-medium">
@@ -65,7 +67,7 @@ const Hero = () => {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark text-accent text-sm font-medium">
               <Sparkles className="w-4 h-4" />
-              Transformando o futuro com IA
+              IA • Atendimento • IoT • Educação
             </span>
           </motion.div>
 
@@ -75,8 +77,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight mb-6"
           >
-            Inteligência Artificial &{" "}
-            <span className="text-accent">Educação Digital</span>
+            Tecnologia que <span className="text-accent">conecta, automatiza</span> e ensina
           </motion.h1>
 
           <motion.p
@@ -85,8 +86,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-10"
           >
-            Consultoria especializada em soluções de Inteligência Artificial e personalização 
-            do Moodle para impulsionar sua empresa e instituição educacional.
+            Soluções sob medida em Inteligência Artificial, atendimento omnichannel com CRM e IA, plataformas IoT, Moodle personalizado e treinamentos em tecnologia — com a experiência de quem é professor universitário e formado em computação.
           </motion.p>
 
           <motion.div
@@ -102,8 +102,9 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="heroOutline" size="lg" asChild>
-              <a href="#contato">
-                Entre em contato
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2 w-5 h-5" />
+                Falar no WhatsApp
               </a>
             </Button>
           </motion.div>
@@ -131,6 +132,14 @@ const Hero = () => {
             <Sparkles className="w-6 h-6 text-accent" />
           </div>
         </motion.div>
+
+        {[{I:MessageCircle,c:"bottom-24 right-16",d:"1s"},{I:Cpu,c:"top-44 left-16",d:"3s"},{I:GraduationCap,c:"top-1/2 left-6",d:"1.5s"}].map(({I,c,d},i)=>(
+          <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.1 + i*0.2 }} className={`absolute ${c} hidden lg:block`}>
+            <div className="w-14 h-14 rounded-2xl glass-dark flex items-center justify-center animate-float" style={{ animationDelay: d }}>
+              <I className="w-6 h-6 text-accent" />
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       {/* Bottom gradient fade */}
